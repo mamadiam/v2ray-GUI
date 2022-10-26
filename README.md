@@ -1,7 +1,7 @@
 # v2ray Server with Interface
 
 For this you need two servers, one in Iran and the other outside of Iran.</br>
-you can google it or using websites like [Sindad](https://sindad.com/) or [ParsPack](https://parspack.com/) or any other services you like, just make sure that your VPS is located in <strong>America</strong></br>
+you can google it or using websites like [Sindad](https://sindad.com/), [ParsPack](https://parspack.com/), [ParsVDS](https://parsvds.com/virtual-server/iran-ssd/) or any other services you like, just make sure that your VPS is located in <strong>America</strong></br>
 Note: You don't need anything fancy, even the most basic and simple plans of the VPS's will do the magic.
 <hr>
 </br>
@@ -48,7 +48,7 @@ That's it for your non-IR Server, now let's setup you IR Server.</br></br>
 ```shell script
 sudo apt update && apt upgrade -y
 ``` 
-#### 2. Run the following command all at once </br>
+#### 2. Run the following commands all at once </br>
 First change the `YOUR_IR_SERVER_IP` & `YOUR_NON_IR_SERVER_IP`</br>
 ```shell script
 sysctl net.ipv4.ip_forward=1
