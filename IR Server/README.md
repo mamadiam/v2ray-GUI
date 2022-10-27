@@ -4,12 +4,18 @@
 ```shell script
 sudo apt update && apt upgrade -y
 ``` 
-#### 2. Run the following commands all at once </br>
+#### 2. Run the following commands </br>
 First change the `YOUR_IR_SERVER_IP` & `YOUR_NON_IR_SERVER_IP`</br>
 ```shell script
 sysctl net.ipv4.ip_forward=1
+``` 
+```shell script
 iptables -t nat -A PREROUTING -p tcp --dport 22 -j DNAT --to-destination YOUR_IR_SERVER_IP
+``` 
+```shell script
 iptables -t nat -A PREROUTING -j DNAT --to-destination YOUR_NON_IR_SERVER_IP
+``` 
+```shell script
 iptables -t nat -A POSTROUTING -j MASQUERADE
 ``` 
 Only use the following command if you have slow connections and got disconnected repeatedly </br>
